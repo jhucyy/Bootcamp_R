@@ -151,4 +151,3 @@ gss_cat %>%
                                 dem = c("Not str democrat", "Strong democrat")
   )) %>%
   count(partyid)
-s
