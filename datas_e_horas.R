@@ -13,6 +13,7 @@ library(nycflights13)
 
 # ()today or now() apresenta a data atual
 
+
 today()
 now()
 
@@ -85,7 +86,23 @@ flights %>%
   mutate(wday = wday %>% fct_infreq()) %>% 
   filter(!is.na(wday)) %>% 
   ggplot() +
-  geom_bar(aes(x = wday))+
+  geom_bar(aes(x = wday), alpha = 1/2, color = "green")+
   coord_flip()+
   theme_classic()+
   xlab("dias_da_semana")
+
+
+# padrão do horário dos voos por minuto:
+
+# quantos anos eu tenho
+
+m_idade <- today() - ymd(19970818)
+m_idade
+
+as.duration(m_idade)
+
+# checar a zona do fuso horário:
+Sys.timezone()
+
+
+
